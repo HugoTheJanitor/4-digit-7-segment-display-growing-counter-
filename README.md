@@ -75,9 +75,14 @@ See the [Photos](https://github.com/HugoTheJanitor/4-digit-7-segment-display-gro
 
 ### Visual Studio Code
 
-A Visual Studio Code version is also included in the repository.
+A separate Visual Studio Code version is included in the repository.
 
-Open the `VisualStudioCode/` folder and use your Arduino development setup to upload the project.
+The `VisualStudioCode` folder contains:
+
+- `4-digit 7-segment_display_counterVSC` — the counter code adapted for Visual Studio Code.
+- `Arduino.h` — a small compatibility header that defines Arduino constants and functions such as `HIGH`, `LOW`, `OUTPUT`, `pinMode()`, `digitalWrite()`, `delay()` and `millis()` for code checking in Visual Studio Code.
+
+The Visual Studio Code version also includes an explicit declaration of `displayNumber()` because Arduino IDE normally generates function prototypes automatically.
 
 ---
 
@@ -185,6 +190,7 @@ The speed stops increasing when the delay reaches approximately **20 ms**.
 - Creating an automatic counter
 - Changing program speed dynamically
 - Working with Arduino Mega 2560 pins
+- Adapting Arduino code for Visual Studio Code
 - Organizing an Arduino project on GitHub
 
 ---
@@ -198,7 +204,9 @@ The speed stops increasing when the delay reaches approximately **20 ms**.
 │   └── 7-segment_display_counter.ino
 │
 ├── VisualStudioCode/
-│   └── ...
+│   ├── 4-digit 7-segment_display_counterVSC
+│   ├── 7-segment_display_counter_VSC.cpp
+│   └── Arduino.h
 │
 ├── Photos/
 │   ├── FullPhotoOfProject.png
